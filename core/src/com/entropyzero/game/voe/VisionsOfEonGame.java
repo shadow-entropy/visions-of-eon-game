@@ -1,31 +1,16 @@
 package com.entropyzero.game.voe;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.ScreenUtils;
+import com.badlogic.gdx.Game;
+import com.entropyzero.game.voe.screen.MainMenuScreen;
 
-public class VisionsOfEonGame extends ApplicationAdapter {
-	SpriteBatch batch;
-	//Texture img;
+public class VisionsOfEonGame extends Game {
+
+	MainMenuScreen mainMenuScreen;
 	
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
+		mainMenuScreen = new MainMenuScreen();
+		setScreen(mainMenuScreen);
 		//img = new Texture("badlogic.jpg");
-	}
-
-	@Override
-	public void render () {
-		ScreenUtils.clear(1, 0, 0, 1);
-		batch.begin();
-		//batch.draw(img, 0, 0);
-		batch.end();
-	}
-	
-	@Override
-	public void dispose () {
-		batch.dispose();
-		//img.dispose();
 	}
 }

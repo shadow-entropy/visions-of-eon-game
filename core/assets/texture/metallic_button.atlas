@@ -1,0 +1,27 @@
+
+metallic_button.png
+size: 2048, 1024
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+metallic-button-active-big
+  rotate: false
+  xy: 2, 390
+  size: 996, 466
+  orig: 996, 466
+  offset: 0, 0
+  index: -1
+metallic-button-active-same-size
+  rotate: false
+  xy: 2, 2
+  size: 878, 386
+  orig: 878, 386
+  offset: 0, 0
+  index: -1
+metallic-button-inactive
+  rotate: false
+  xy: 1000, 470
+  size: 878, 386
+  orig: 878, 386
+  offset: 0, 0
+  index: -1

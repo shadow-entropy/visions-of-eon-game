@@ -1,0 +1,37 @@
+{
+  BitmapFont: {
+    fontOne: {
+      file: ../font/font_one.fnt
+    }
+  },
+
+  Color: {
+    white: { r: 1, g: 1, b: 1, a: 1 },
+    neonBlue: { hex: #42BCFF }
+    deepBlue: { hex: "#a077ffff" }
+  },
+
+  TintedDrawable: {
+    metallic-button-active-same-size-blue: {
+      name: metallic-button-active-same-size,
+      color: deepBlue
+    }
+  },
+
+  TextButtonStyle: {
+/*    default: {
+      down: round-blue, up: round,
+      font: fontOne, fontColor: white
+    },*/
+    default: {
+      down: metallic-button-active-big,
+      up:  metallic-button-inactive,
+      checked: metallic-button-active-same-size-blue,
+      font: fontOne,
+      fontColor: neonBlue,
+      checkedFontColor: deepBlue
+    },
+  },
+
+
+}
