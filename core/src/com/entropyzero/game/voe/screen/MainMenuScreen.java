@@ -20,7 +20,7 @@ public class MainMenuScreen extends ScreenAdapter {
         stage = new Stage(viewport);
 
 
-        var skin = Assets.METALLIC_BUTTON.asSkin();
+        var skin = Assets.METALLIC_BUTTON.skin();
         var button = new TextButton("Играть", skin, "default");
         button.setPosition(100, 100);
         //button.setWidth(500);
