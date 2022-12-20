@@ -6,7 +6,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public enum Assets {
 
-    METALLIC_BUTTON("style/button.json", "texture/metallic_button.atlas")
+    METALLIC_BUTTON("style/button.json", "texture/metallic_button.atlas"),
+    TILTED_SCROLL_PANE("style/tilted-scroll-pane.json", "texture/tilted-scroll-pane.atlas")
     ;
 
     Assets(String skinPath, String textureAtlasPath) {

@@ -1,0 +1,55 @@
+
+tilted-scroll-pane.png
+size: 1024, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+arrow-down
+  rotate: false
+  xy: 850, 141
+  size: 120, 65
+  orig: 120, 65
+  offset: 0, 0
+  index: -1
+arrow-down-big
+  rotate: false
+  xy: 581, 129
+  size: 144, 77
+  orig: 144, 77
+  offset: 0, 0
+  index: -1
+arrow-down-focus
+  rotate: false
+  xy: 727, 74
+  size: 120, 65
+  orig: 120, 65
+  offset: 0, 0
+  index: -1
+arrow-up
+  rotate: false
+  xy: 849, 74
+  size: 120, 65
+  orig: 120, 65
+  offset: 0, 0
+  index: -1
+arrow-up-big
+  rotate: false
+  xy: 581, 50
+  size: 144, 77
+  orig: 144, 77
+  offset: 0, 0
+  index: -1
+arrow-up-focus
+  rotate: false
+  xy: 727, 141
+  size: 121, 65
+  orig: 121, 65
+  offset: 0, 0
+  index: -1
+list-element
+  rotate: false
+  xy: 2, 2
+  size: 577, 204
+  orig: 577, 204
+  offset: 0, 0
+  index: -1

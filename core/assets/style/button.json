@@ -1,20 +1,21 @@
 {
   BitmapFont: {
     fontOne: {
-      file: ../font/font_one.fnt
+      file: ../font/font-amazobitaem.fnt
     }
   },
 
   Color: {
     white: { r: 1, g: 1, b: 1, a: 1 },
-    neonBlue: { hex: #42BCFF }
+    neonBlue: { hex: #42BCFF },
+    ghostBlue: { hex: #9ccfffac },
     deepBlue: { hex: "#a077ffff" }
   },
 
   TintedDrawable: {
     metallic-button-active-same-size-blue: {
       name: metallic-button-active-same-size,
-      color: deepBlue
+      color: ghostBlue
     }
   },
 
@@ -25,11 +26,12 @@
     },*/
     default: {
       down: metallic-button-active-big,
-      up:  metallic-button-inactive,
-      checked: metallic-button-active-same-size-blue,
+      up:  metallic-button-active-same-size,
+      over: metallic-button-active-same-size-blue
+      //checked: metallic-button-active-big,
       font: fontOne,
       fontColor: neonBlue,
-      checkedFontColor: deepBlue
+      checkedFontColor: neonBlue
     },
   },
 

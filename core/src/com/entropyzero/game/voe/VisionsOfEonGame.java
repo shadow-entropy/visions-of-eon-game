@@ -9,7 +9,7 @@ public class VisionsOfEonGame extends Game {
 	
 	@Override
 	public void create () {
-		mainMenuScreen = new MainMenuScreen();
+		mainMenuScreen = new MainMenuScreen(this);
 		setScreen(mainMenuScreen);
 		//img = new Texture("badlogic.jpg");
 	}

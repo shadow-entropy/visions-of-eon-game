@@ -1,0 +1,37 @@
+{
+  BitmapFont: {
+    font-a: {
+      file: ../font/font-amazobitaem.fnt
+    }
+  },
+
+  Color: {
+    white-ghost: { r: 1, g: 1, b: 1, a: 0.5 },
+    white-sakura: { hex: #E4DFFF },
+    glowing-ice: { hex: #75E6FF },
+    obsidian-blue: { hex: #070314 }
+  },
+
+  ButtonStyle: {
+    top-arrow: {
+      down: arrow-up-big,
+      up:  arrow-up,
+      over: arrow-up-focus,
+    },
+    bottom-arrow: {
+      down: arrow-down-big,
+      up:  arrow-down,
+      over: arrow-down-focus,
+    }
+  },
+
+  LabelStyle: {
+    element: {
+      font: font-a,
+      fontColor: glowing-ice,
+      background: list-element,
+    }
+  }
+
+
+}
