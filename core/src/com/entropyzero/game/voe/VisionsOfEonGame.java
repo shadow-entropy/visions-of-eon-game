@@ -1,16 +1,15 @@
 package com.entropyzero.game.voe;
 
 import com.badlogic.gdx.Game;
-import com.entropyzero.game.voe.screen.MainMenuScreen;
+import com.entropyzero.game.voe.screen.BattleScreen;
 
 public class VisionsOfEonGame extends Game {
 
-	MainMenuScreen mainMenuScreen;
+	BattleScreen battleScreen;
 	
 	@Override
 	public void create () {
-		mainMenuScreen = new MainMenuScreen(this);
-		setScreen(mainMenuScreen);
-		//img = new Texture("badlogic.jpg");
+		battleScreen = new BattleScreen(this);
+		setScreen(battleScreen);
 	}
 }

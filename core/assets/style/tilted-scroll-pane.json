@@ -26,10 +26,36 @@
   },
 
   LabelStyle: {
-    element: {
+    default: {
       font: font-a,
       fontColor: glowing-ice,
-      background: list-element,
+      //background: list-element,
+    }
+    pane-element-title: {
+      font: font-a,
+      fontColor: obsidian-blue,
+      //background: list-element,
+    }
+    pane-element-text: {
+      font: font-a,
+      fontColor: glowing-ice,
+      //background: list-element,
+    }
+  }
+
+  ListStyle: {
+    default: {
+      font: font-a,
+      fontColorSelected: glowing-ice,
+      fontColorUnselected: white-sakura,
+      selection: list-element,
+    }
+
+  }
+
+  ScrollPaneStyle: {
+    default: {
+
     }
   }
 
