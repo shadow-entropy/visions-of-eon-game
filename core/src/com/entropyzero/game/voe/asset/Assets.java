@@ -6,23 +6,22 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public enum Assets {
 
-    METALLIC_BUTTON("style/button.json", "texture/metallic_button.atlas"),
-    TILTED_SCROLL_PANE("style/tilted-scroll-pane.json", "texture/tilted-scroll-pane.atlas")
+    SKILL_PANE
     ;
 
-    Assets(String skinPath, String textureAtlasPath) {
-        this.skinPath = skinPath;
-        this.textureAtlasPath = textureAtlasPath;
+    Assets() {
+        String assetName = this.name().toLowerCase().replaceAll("_", "-");
+        String atlasPath = "texture/%s.atlas".formatted(assetName);
+        String stylePath = "style/%s.json".formatted(assetName);
+        this.atlas = new TextureAtlas(Gdx.files.internal(atlasPath));
+        this.skin = new Skin(Gdx.files.internal(stylePath), atlas);
     }
 
-    private final String skinPath;
-    private final String textureAtlasPath;
+    private final TextureAtlas atlas;
+    private final Skin skin;
+
 
     public Skin skin() {
-        return new Skin(Gdx.files.internal(skinPath), textureAtlas());
-    }
-
-    public TextureAtlas textureAtlas() {
-        return new TextureAtlas(Gdx.files.internal(textureAtlasPath));
+        return skin;
     }
 }

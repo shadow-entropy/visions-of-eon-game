@@ -1,26 +1,26 @@
 
-tilted-scroll-pane.png
+skill-pane.png
 size: 2048, 1024
 format: RGBA8888
-filter: Nearest, Nearest
+filter: MipMapLinearLinear, MipMapLinearLinear
 repeat: none
 chain-button
   rotate: false
-  xy: 1385, 673
+  xy: 1383, 719
   size: 209, 299
   orig: 209, 299
   offset: 0, 0
   index: -1
 chain-button-big
   rotate: false
-  xy: 1137, 618
+  xy: 1135, 664
   size: 246, 354
   orig: 246, 354
   offset: 0, 0
   index: -1
 chain-button-focus
   rotate: false
-  xy: 1137, 317
+  xy: 1135, 363
   size: 209, 299
   orig: 209, 299
   offset: 0, 0
@@ -35,7 +35,7 @@ lock-button
 skill-pane-element
   rotate: false
   xy: 2, 303
-  size: 1133, 669
-  orig: 1133, 669
+  size: 1131, 715
+  orig: 1131, 715
   offset: 0, 0
   index: -1

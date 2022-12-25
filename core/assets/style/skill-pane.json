@@ -17,7 +17,7 @@
     space-twilight: { hex: #040217 }
   },
 
-  ButtonStyle: {
+  ImageButtonStyle: {
     lock-button-style: {
       down: lock-button,
       up:  lock-button,
