@@ -6,44 +6,53 @@
   },
 
   Color: {
-    white-ghost: { r: 1, g: 1, b: 1, a: 0.5 },
+    white-ghost: { a: 0.23921569, b: 1.0, g: 1.0, r: 1.0 },
     white-sakura: { hex: #E4DFFF },
     glowing-ice: { hex: #75E6FF },
-    obsidian-blue: { hex: #070314 }
+    obsidian-blue: { hex: #070314 },
+
+    spring-sky: {hex: #70CCFF }
+    lilac: { hex: #7471FF }
+    white-lilac: { hex: #D4D1FF },
+    space-twilight: { hex: #040217 }
   },
 
   ButtonStyle: {
-    top-arrow: {
-      down: arrow-up-big,
-      up:  arrow-up,
-      over: arrow-up-focus,
+    lock-button-style: {
+      down: lock-button,
+      up:  lock-button,
+      over: lock-button,
     },
-    bottom-arrow: {
-      down: arrow-down-big,
-      up:  arrow-down,
-      over: arrow-down-focus,
+    chain-button-style: {
+      down: chain-button-big,
+      up:  chain-button,
+      over: chain-button-focus,
     }
   },
 
   LabelStyle: {
     default: {
       font: font-a,
-      fontColor: glowing-ice,
-      //background: list-element,
+      fontColor: spring-sky,
     }
-    pane-element-title: {
+    skill-name: {
       font: font-a,
-      fontColor: obsidian-blue,
-      //background: list-element,
+      fontColor: spring-sky,
     }
-    pane-element-text: {
+    skill-description: {
       font: font-a,
-      fontColor: glowing-ice,
-      //background: list-element,
+      fontColor: white-lilac,
     }
   }
 
-  ListStyle: {
+  TintedDrawable: {
+    skill-pane-element-lock: {
+      name: skill-pane-element,
+      color: white-ghost
+    }
+  }
+
+/*  ListStyle: {
     default: {
       font: font-a,
       fontColorSelected: glowing-ice,
@@ -51,13 +60,11 @@
       selection: list-element,
     }
 
-  }
+  }*/
 
   ScrollPaneStyle: {
     default: {
 
     }
   }
-
-
 }

@@ -1,0 +1,14 @@
+{
+    list: [
+        {
+            class: skill,
+            name: Agdhs,
+            styleName: pic-one
+        },
+        {
+            class: skill,
+            name: Gagu,
+            styleName: pic-two
+        }
+    ]
+}

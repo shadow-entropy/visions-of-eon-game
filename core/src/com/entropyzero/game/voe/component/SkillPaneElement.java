@@ -17,15 +17,15 @@ public class SkillPaneElement extends Group {
     public SkillPaneElement(Builder builder) {
         var skin = Assets.TILTED_SCROLL_PANE.skin();
 
-        title = new Label(builder.titleContent, skin, "pane-element-title");
+        title = new Label(builder.titleContent, skin, "skill-name");
         title.setPosition(40, 160);
         title.setZIndex(5);
 
-        text = new Label(builder.textContent, skin, "pane-element-text");
+        text = new Label(builder.textContent, skin, "skill-description");
         text.setPosition(40, 120);
         text.setZIndex(6);
 
-        background = new Image(skin.getDrawable("list-element"));
+        background = new Image(skin.getDrawable("skill-pane-element"));
         background.setZIndex(4);
 
         setSize(400, 180);
