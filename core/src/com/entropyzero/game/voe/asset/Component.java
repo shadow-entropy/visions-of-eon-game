@@ -4,13 +4,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
-public enum Assets {
+public enum Component implements AssetEnum {
 
     SKILL_PANE
     ;
 
-    Assets() {
-        String assetName = this.name().toLowerCase().replaceAll("_", "-");
+    Component() {
+        String assetName = assetName();
         String atlasPath = "texture/%s.atlas".formatted(assetName);
         String stylePath = "style/%s.json".formatted(assetName);
         this.atlas = new TextureAtlas(Gdx.files.internal(atlasPath));

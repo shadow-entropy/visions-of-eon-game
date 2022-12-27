@@ -1,7 +1,7 @@
 {
   BitmapFont: {
-    font-a: {
-      file: ../font/font-amazobitaem.fnt
+    font-one: {
+      file: ../font/font_one.fnt,
     }
   },
 
@@ -32,17 +32,17 @@
 
   LabelStyle: {
     default: {
-      font: font-a,
+      font: font-one,
       fontColor: spring-sky,
     }
-    skill-name: {
-      font: font-a,
+/*    skill-name: {
+      font: font-am-32,
       fontColor: spring-sky,
     }
     skill-description: {
-      font: font-a,
+      font: font-am-20,
       fontColor: white-lilac,
-    }
+    }*/
   }
 
   TintedDrawable: {

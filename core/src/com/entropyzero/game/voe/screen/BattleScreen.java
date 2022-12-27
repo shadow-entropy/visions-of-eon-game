@@ -4,12 +4,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FillViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.entropyzero.game.voe.VisionsOfEonGame;
-import com.entropyzero.game.voe.component.Components;
+import com.entropyzero.game.voe.component.ComponentFactory;
 
 public class BattleScreen extends ScreenAdapter {
 
@@ -28,7 +26,7 @@ public class BattleScreen extends ScreenAdapter {
 
         Gdx.input.setInputProcessor(stage);
 
-        stage.addActor(Components.newSkillPane());
+        stage.addActor(ComponentFactory.newSkillPane());
     }
 
     @Override
