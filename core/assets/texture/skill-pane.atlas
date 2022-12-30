@@ -1,41 +1,48 @@
 
 skill-pane.png
-size: 2048, 1024
+size: 2048, 2048
 format: RGBA8888
 filter: MipMapLinearLinear, MipMapLinearLinear
 repeat: none
 chain-button
-  rotate: false
-  xy: 1383, 719
-  size: 209, 299
-  orig: 209, 299
-  offset: 0, 0
-  index: -1
-chain-button-big
-  rotate: false
-  xy: 1135, 664
-  size: 246, 354
-  orig: 246, 354
-  offset: 0, 0
-  index: -1
-chain-button-focus
-  rotate: false
-  xy: 1135, 363
-  size: 209, 299
-  orig: 209, 299
-  offset: 0, 0
-  index: -1
-lock-button
   rotate: false
   xy: 2, 2
   size: 209, 299
   orig: 209, 299
   offset: 0, 0
   index: -1
-skill-pane-element
+chain-button-big
+  rotate: false
+  xy: 1135, 1552
+  size: 266, 384
+  orig: 266, 384
+  offset: 0, 0
+  index: -1
+chain-button-focus
+  rotate: false
+  xy: 1403, 1637
+  size: 209, 299
+  orig: 209, 299
+  offset: 0, 0
+  index: -1
+lock-button
   rotate: false
   xy: 2, 303
-  size: 1131, 715
-  orig: 1131, 715
+  size: 209, 299
+  orig: 209, 299
+  offset: 0, 0
+  index: -1
+skill-pane-element
+  rotate: false
+  xy: 2, 1271
+  size: 1131, 665
+  orig: 1131, 665
+  offset: 0, 0
+  index: -1
+skill-pane-last-element
+  rotate: false
+  xy: 2, 604
+  size: 1130, 665
+  orig: 1130, 665
   offset: 0, 0
   index: -1

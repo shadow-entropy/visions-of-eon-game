@@ -9,18 +9,30 @@ public interface ComponentFactory {
     static ScrollPane newSkillPane() {
         var skin = Component.SKILL_PANE.skin();
 
-        VerticalGroup group = new VerticalGroup().space(5);
+        VerticalGroup group = new VerticalGroup().space(5).padTop(150);
         float angle = 5f;
         group.setRotation(angle);
-        group.addActor(SkillPaneElement.builder().title("001").text("Текст").build());
-        group.addActor(SkillPaneElement.builder().title("002").text("Текст2").build());
-        group.addActor(SkillPaneElement.builder().title("003").text("Текст3").build());
-        group.addActor(SkillPaneElement.builder().title("003").text("Текст4").build());
+        group.addActor(new SkillPaneElement("Мега атака", "a\na")
+        );
+        group.addActor(new SkillPaneElement("Мега атака", "a")
+        );
+        group.addActor(new SkillPaneElement("Огненная жатва",
+                        """
+                        Призывает огненный шторм.
+                        Длится 3 хода
+                        """)
+        );
+        group.addActor(new SkillPaneElement(
+                "Суперпозиция",
+                "Последная атака\nповторяется 8-12 раз",
+                "skill-pane-last-element"
+                )
+        );
 
         var pane = new ScrollPane(group, skin);
 
-        pane.setPosition(0, 0);
-        pane.setSize(700, 700);
+        pane.setPosition(0, -100);
+        pane.setSize(650, 800);
         pane.setRotation(angle);
         return pane;
     }

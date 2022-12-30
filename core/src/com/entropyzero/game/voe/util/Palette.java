@@ -8,5 +8,6 @@ public interface Palette {
     LILAC = new Color(0xE4DFFFFF),
     SPRING_SKY = new Color(0x70CCFFFF),
     WHITE_LILAC = new Color(0xD4D1FFFF),
-    SPACE_TWILIGHT = new Color(0x040217FF);
+    SPACE_TWILIGHT = new Color(0x040217FF),
+    QUARTZ = new Color(0xE6E4FFFF);
 }

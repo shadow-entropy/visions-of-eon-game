@@ -14,6 +14,7 @@
     spring-sky: {hex: #70CCFF }
     lilac: { hex: #7471FF }
     white-lilac: { hex: #D4D1FF },
+    quartz: { hex: #E6E4FF },
     space-twilight: { hex: #040217 }
   },
 

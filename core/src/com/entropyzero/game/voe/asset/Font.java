@@ -9,36 +9,45 @@ import java.util.function.Consumer;
 
 public enum Font implements AssetEnum {
 
-    AMAZ_OBITAEM;
+    AMAZ_OBITAEM,
+    EXO_2_LIGHT_ITALIC,
+    GALIVER_SANS,
+    GPUTEKS_REGULAR,
+    GPUTEKS_BOLD,
+    KAPPAS_POROROCA,
+    LINERAMA_BOLD,
+    BICUBIK("font/bicubik.otf");
 
-    Font() {
-        fontPath = "font/%s.fnt".formatted(assetName());
-    }
 
+    public static final String CHARACTERS = """
+        ABCDEFGHIJKLMNOPGRSTUVWXYZ
+        abcdefghijklmnopgrstuvwxyz
+        АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+        абвгдеёжзийклмнопрстуфхцчшщъыьэюя
+        0123456789 -+=\\/.,:;()*%!?
+        """;
     private final String fontPath;
 
-    public FontBuilder newBitmapFont() {
-        return new FontBuilder();
+    Font() {
+        fontPath = "font/%s.ttf".formatted(assetName());
     }
 
-    public static class FontBuilder {
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+    Font(String fontPath) {
+        this.fontPath = fontPath;
+    }
 
-        public FontBuilder withMipMaps() {
-            parameter.genMipMaps = true;
-            parameter.minFilter = Texture.TextureFilter.MipMapLinearLinear;
-            parameter.magFilter = Texture.TextureFilter.Linear;
-            return this;
-        }
+    public BitmapFont generateWithMipMaps(Consumer<FreeTypeFontGenerator.FreeTypeFontParameter> config) {
+        var parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.characters = CHARACTERS;
+        parameter.genMipMaps = true;
+        parameter.minFilter = Texture.TextureFilter.MipMapLinearLinear;
+        parameter.magFilter = Texture.TextureFilter.Linear;
+        config.accept(parameter);
 
-        public BitmapFont build(Consumer<FreeTypeFontGenerator.FreeTypeFontParameter> config) {
-            //ToDo use ttf font path
-            var generator = new FreeTypeFontGenerator(Gdx.files.internal("font/Amazobitaemostrovitalic-A4P7.ttf"));
-            config.accept(parameter);
-            var font = generator.generateFont(parameter);
-            generator.dispose();
-            return font;
-        }
+        var generator = new FreeTypeFontGenerator(Gdx.files.internal(fontPath));
 
+        var font = generator.generateFont(parameter);
+        generator.dispose();
+        return font;
     }
 }
