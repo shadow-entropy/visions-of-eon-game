@@ -16,7 +16,7 @@ public enum Font implements AssetEnum {
     GPUTEKS_BOLD,
     KAPPAS_POROROCA,
     LINERAMA_BOLD,
-    BICUBIK("font/bicubik.otf");
+    BLOB_SPONGEY;
 
 
     public static final String CHARACTERS = """
@@ -47,6 +47,7 @@ public enum Font implements AssetEnum {
         var generator = new FreeTypeFontGenerator(Gdx.files.internal(fontPath));
 
         var font = generator.generateFont(parameter);
+        font.getData().markupEnabled = true;
         generator.dispose();
         return font;
     }

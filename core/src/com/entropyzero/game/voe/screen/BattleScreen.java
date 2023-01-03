@@ -21,7 +21,8 @@ public class BattleScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        viewport = new FillViewport(1280, 720);
+        ScreenSize size = ScreenSize.HD_2K;
+        viewport = new FillViewport(size.width(), size.height());
         stage = new Stage(viewport);
 
         Gdx.input.setInputProcessor(stage);
