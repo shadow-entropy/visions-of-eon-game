@@ -1,40 +1,57 @@
 package com.entropyzero.game.voe.component;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFontCache;
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
-import com.entropyzero.game.voe.asset.Component;
+import com.entropyzero.game.voe.asset.Font;
 import com.entropyzero.game.voe.screen.ScreenSize;
+
+import static com.entropyzero.game.voe.asset.Component.SKILL_PANE;
 
 public interface ComponentFactory {
 
     static ScrollPane newSkillPane() {
-        var skin = Component.SKILL_PANE.skin();
         var screenSize = ScreenSize.HD_2K;
         float scale = screenSize.scaleFrom(ScreenSize.HD);
+        var titleFont = Font.AMAZ_OBITAEM.generateWithMipMaps(p -> p.size = (int) (20 * scale));
+        var descFont = Font.BLOB_SPONGEY.generateWithMipMaps(p -> p.size = (int) (16 * scale));
+
+        SkillPaneElement e1 = new SkillPaneElement(screenSize)
+                        .title("Мега атака", titleFont)
+                        .description("a\na", descFont)
+                        .background()
+                        .chainingButton(null)
+                        .setup(),
+                e2 = new SkillPaneElement(screenSize)
+                        .title("Мега атака", titleFont)
+                        .description("a", descFont)
+                        .background()
+                        .chainingButton(null)
+                        .setup(),
+                e3 = new SkillPaneElement(screenSize)
+                        .title("Огненная жатва", titleFont)
+                        .description("""
+                        За [#7471FF]15 SP[] призывает огненный шторм.
+                        Длится 3 хода
+                        """, descFont)
+                        .background()
+                        .chainingButton(null)
+                        .setup(),
+                e4 = new SkillPaneElement(screenSize)
+                        .title("Суперпозиция", titleFont)
+                        .description("Последная атака\nповторяется 8-12 раз", descFont)
+                        .background("skill-pane-last-element")
+                        .chainingButton(null)
+                        .setup();
 
         VerticalGroup group = new VerticalGroup().space(5).padTop(150);
         float angle = 5f;
         group.setRotation(angle);
-        group.addActor(new SkillPaneElement(screenSize, "Мега атака", "a\na")
-        );
-        group.addActor(new SkillPaneElement(screenSize,"Мега атака", "a")
-        );
-        group.addActor(new SkillPaneElement(screenSize,"Огненная жатва",
-                        """
-                        За [#7471FF]15 SP[] призывает огненный шторм.
-                        Длится 3 хода
-                        """)
-        );
-        group.addActor(new SkillPaneElement(screenSize,
-                "Суперпозиция",
-                "Последная атака\nповторяется 8-12 раз",
-                "skill-pane-last-element"
-                )
-        );
+        group.addActor(e1);
+        group.addActor(e2);
+        group.addActor(e3);
+        group.addActor(e4);
 
-        var pane = new ScrollPane(group, skin);
-
+        var pane = new ScrollPane(group, SKILL_PANE.skin());
         pane.setPosition(0, -100 * scale);
         pane.setSize(650 * scale, 800 * scale);
         pane.setRotation(angle);

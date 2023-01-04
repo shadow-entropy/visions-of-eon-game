@@ -6,7 +6,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public enum Component implements AssetEnum {
 
-    SKILL_PANE
+    SKILL_PANE,
+    SKILL_ICON
     ;
 
     Component() {

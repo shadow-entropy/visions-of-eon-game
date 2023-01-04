@@ -1,0 +1,146 @@
+
+skill-icon.png
+size: 2048, 512
+format: RGBA8888
+filter: MipMapLinearLinear, MipMapLinearLinear
+repeat: none
+black-hole-skill-icon
+  rotate: false
+  xy: 1722, 340
+  size: 212, 165
+  orig: 212, 165
+  offset: 0, 0
+  index: -1
+black-hole-skill-icon-glow
+  rotate: false
+  xy: 2, 125
+  size: 228, 181
+  orig: 228, 181
+  offset: 0, 0
+  index: -1
+cognitive-skill-icon
+  rotate: false
+  xy: 1520, 166
+  size: 200, 159
+  orig: 200, 159
+  offset: 0, 0
+  index: -1
+cognitive-skill-icon-glow
+  rotate: false
+  xy: 868, 147
+  size: 200, 175
+  orig: 200, 175
+  offset: 0, 0
+  index: -1
+defence-skill-icon
+  rotate: false
+  xy: 1116, 160
+  size: 200, 163
+  orig: 200, 163
+  offset: 0, 0
+  index: -1
+defence-skill-icon-glow
+  rotate: false
+  xy: 1318, 326
+  size: 200, 179
+  orig: 200, 179
+  offset: 0, 0
+  index: -1
+effect-skill-icon
+  rotate: false
+  xy: 1520, 2
+  size: 200, 162
+  orig: 200, 162
+  offset: 0, 0
+  index: -1
+effect-skill-icon-glow
+  rotate: false
+  xy: 1520, 327
+  size: 200, 178
+  orig: 200, 178
+  offset: 0, 0
+  index: -1
+elemental-skill-icon
+  rotate: false
+  xy: 1722, 17
+  size: 206, 162
+  orig: 206, 162
+  offset: 0, 0
+  index: -1
+elemental-skill-icon-glow
+  rotate: false
+  xy: 232, 147
+  size: 221, 178
+  orig: 221, 178
+  offset: 0, 0
+  index: -1
+gun-skill-icon
+  rotate: false
+  xy: 902, 324
+  size: 212, 181
+  orig: 212, 181
+  offset: 0, 0
+  index: -1
+gun-skill-icon-glow
+  rotate: false
+  xy: 2, 308
+  size: 228, 197
+  orig: 228, 197
+  offset: 0, 0
+  index: -1
+healing-skill-icon
+  rotate: false
+  xy: 1318, 160
+  size: 200, 164
+  orig: 200, 164
+  offset: 0, 0
+  index: -1
+healing-skill-icon-glow
+  rotate: false
+  xy: 1116, 325
+  size: 200, 180
+  orig: 200, 180
+  offset: 0, 0
+  index: -1
+melee-skill-icon
+  rotate: false
+  xy: 456, 168
+  size: 206, 162
+  orig: 206, 162
+  offset: 0, 0
+  index: -1
+melee-skill-icon-glow
+  rotate: false
+  xy: 232, 327
+  size: 222, 178
+  orig: 222, 178
+  offset: 0, 0
+  index: -1
+position-skill-icon
+  rotate: false
+  xy: 664, 167
+  size: 202, 160
+  orig: 202, 160
+  offset: 0, 0
+  index: -1
+position-skill-icon-glow
+  rotate: false
+  xy: 682, 329
+  size: 218, 176
+  orig: 218, 176
+  offset: 0, 0
+  index: -1
+stellar-skill-icon
+  rotate: false
+  xy: 1722, 181
+  size: 208, 157
+  orig: 208, 157
+  offset: 0, 0
+  index: -1
+stellar-skill-icon-glow
+  rotate: false
+  xy: 456, 332
+  size: 224, 173
+  orig: 224, 173
+  offset: 0, 0
+  index: -1
