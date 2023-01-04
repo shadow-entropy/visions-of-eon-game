@@ -1,4 +1,4 @@
-package com.entropyzero.game.voe.component;
+package com.entropyzero.game.voe.view;
 
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
@@ -16,14 +16,16 @@ public interface ComponentFactory {
         var descFont = Font.BLOB_SPONGEY.generateWithMipMaps(p -> p.size = (int) (16 * scale));
 
         SkillPaneElement e1 = new SkillPaneElement(screenSize)
-                        .title("Мега атака", titleFont)
+                        .title("Мега защита", titleFont)
                         .description("a\na", descFont)
+                        .icon("defence-skill-icon")
                         .background()
                         .chainingButton(null)
                         .setup(),
                 e2 = new SkillPaneElement(screenSize)
-                        .title("Мега атака", titleFont)
+                        .title("Мега бафф", titleFont)
                         .description("a", descFont)
+                        .icon("effect-skill-icon")
                         .background()
                         .chainingButton(null)
                         .setup(),
@@ -33,12 +35,14 @@ public interface ComponentFactory {
                         За [#7471FF]15 SP[] призывает огненный шторм.
                         Длится 3 хода
                         """, descFont)
+                        .icon("elemental-skill-icon")
                         .background()
                         .chainingButton(null)
                         .setup(),
                 e4 = new SkillPaneElement(screenSize)
                         .title("Суперпозиция", titleFont)
                         .description("Последная атака\nповторяется 8-12 раз", descFont)
+                        .icon("position-skill-icon")
                         .background("skill-pane-last-element")
                         .chainingButton(null)
                         .setup();

@@ -1,20 +1,16 @@
-package com.entropyzero.game.voe.component;
+package com.entropyzero.game.voe.view;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Group;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-import com.entropyzero.game.voe.asset.Component;
-import com.entropyzero.game.voe.asset.Font;
 import com.entropyzero.game.voe.screen.ScreenSize;
 import com.entropyzero.game.voe.util.Palette;
 
+import static com.entropyzero.game.voe.asset.Component.SKILL_ICON;
 import static com.entropyzero.game.voe.asset.Component.SKILL_PANE;
 
 public class SkillPaneElement extends Group {
@@ -25,8 +21,8 @@ public class SkillPaneElement extends Group {
 
     private Label title;
     private Label text;
-    private Image background;
     private Image skillIcon;
+    private Image background;
     private ImageButton chainingButton;
 
     public SkillPaneElement(ScreenSize screenSize) {
@@ -48,6 +44,14 @@ public class SkillPaneElement extends Group {
         text.setSize(200 * scale, 80 * scale);
         text.setAlignment(Align.center, Align.center);
         text.setZIndex(6);
+        return this;
+    }
+
+    public SkillPaneElement icon(String style) {
+        skillIcon = new Image(SKILL_ICON.skin().getDrawable(style));
+        skillIcon.setScale(scale * 0.27f);
+        skillIcon.setPosition(75, 210);
+        skillIcon.setZIndex(10);
         return this;
     }
 
@@ -76,9 +80,10 @@ public class SkillPaneElement extends Group {
 
     public SkillPaneElement setup() {
         addActor(background);
+        addActor(skillIcon);
         addActor(chainingButton);
 
-        var titleWrapper = Wrapper.of(title);
+        var titleWrapper = ViewWrapper.of(title);
         titleWrapper.setPosition(225 * scale, 155 * scale);
         titleWrapper.setRotation(10);
 

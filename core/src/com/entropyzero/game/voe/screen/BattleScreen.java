@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.entropyzero.game.voe.VisionsOfEonGame;
-import com.entropyzero.game.voe.component.ComponentFactory;
+import com.entropyzero.game.voe.view.ComponentFactory;
 
 public class BattleScreen extends ScreenAdapter {
 
