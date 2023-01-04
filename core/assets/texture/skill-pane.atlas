@@ -6,42 +6,56 @@ filter: MipMapLinearLinear, MipMapLinearLinear
 repeat: none
 chain-button
   rotate: false
-  xy: 2, 2
-  size: 209, 299
-  orig: 209, 299
+  xy: 470, 341
+  size: 217, 307
+  orig: 217, 307
   offset: 0, 0
   index: -1
 chain-button-big
   rotate: false
-  xy: 1135, 1552
-  size: 266, 384
-  orig: 266, 384
+  xy: 1135, 1590
+  size: 274, 392
+  orig: 274, 392
   offset: 0, 0
   index: -1
 chain-button-focus
   rotate: false
-  xy: 1403, 1637
-  size: 209, 299
-  orig: 209, 299
+  xy: 251, 341
+  size: 217, 307
+  orig: 217, 307
   offset: 0, 0
   index: -1
 lock-button
   rotate: false
-  xy: 2, 303
-  size: 209, 299
-  orig: 209, 299
+  xy: 2, 2
+  size: 217, 307
+  orig: 217, 307
+  offset: 0, 0
+  index: -1
+skill-pane-button
+  rotate: false
+  xy: 2, 311
+  size: 247, 337
+  orig: 247, 337
+  offset: 0, 0
+  index: -1
+skill-pane-button-focus
+  rotate: false
+  xy: 1411, 1680
+  size: 223, 302
+  orig: 223, 302
   offset: 0, 0
   index: -1
 skill-pane-element
   rotate: false
-  xy: 2, 1271
+  xy: 2, 1317
   size: 1131, 665
   orig: 1131, 665
   offset: 0, 0
   index: -1
 skill-pane-last-element
   rotate: false
-  xy: 2, 604
+  xy: 2, 650
   size: 1130, 665
   orig: 1130, 665
   offset: 0, 0

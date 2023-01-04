@@ -1,33 +1,14 @@
 package com.entropyzero.game.voe.screen;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.utils.viewport.FillViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
 import com.entropyzero.game.voe.VisionsOfEonGame;
-import com.entropyzero.game.voe.view.ComponentFactory;
+import com.entropyzero.game.voe.view.ScreenEnvironment;
 
-public class BattleScreen extends ScreenAdapter {
+public class BattleScreen extends VoeScreen {
 
-    private VisionsOfEonGame game;
-    private Stage stage;
-    private Viewport viewport;
-
-    public BattleScreen(VisionsOfEonGame game) {
-        this.game = game;
-    }
-
-    @Override
-    public void show() {
-        ScreenSize size = ScreenSize.HD_2K;
-        viewport = new FillViewport(size.width(), size.height());
-        stage = new Stage(viewport);
-
-        Gdx.input.setInputProcessor(stage);
-
-        stage.addActor(ComponentFactory.newSkillPane());
+    public BattleScreen(VisionsOfEonGame game, ScreenEnvironment environment) {
+        super(game, environment);
     }
 
     @Override
@@ -37,10 +18,5 @@ public class BattleScreen extends ScreenAdapter {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act();
         stage.draw();
-    }
-
-    @Override
-    public void resize(int width, int height) {
-        viewport.update(width, height);
     }
 }

@@ -83,7 +83,7 @@ public class SkillPaneElement extends Group {
         addActor(skillIcon);
         addActor(chainingButton);
 
-        var titleWrapper = ViewWrapper.of(title);
+        var titleWrapper = Wrapper.of(title);
         titleWrapper.setPosition(225 * scale, 155 * scale);
         titleWrapper.setRotation(10);
 

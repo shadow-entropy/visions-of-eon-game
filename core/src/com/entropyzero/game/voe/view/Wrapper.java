@@ -4,11 +4,11 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 
-public class ViewWrapper<A extends Actor> extends Table {
+public class Wrapper<A extends Actor> extends Table {
 
 
     //https://gamedev.stackexchange.com/questions/152168/rotate-a-single-member-of-a-group
-    private ViewWrapper(A actor) {
+    private Wrapper(A actor) {
         super();
         actor.setOrigin(Align.center);
         setTransform(true);
@@ -16,7 +16,7 @@ public class ViewWrapper<A extends Actor> extends Table {
         add(actor);
     }
 
-    public static <A extends Actor> ViewWrapper<A> of(A actor) {
-        return new ViewWrapper<>(actor);
+    public static <A extends Actor> Wrapper<A> of(A actor) {
+        return new Wrapper<>(actor);
     }
 }

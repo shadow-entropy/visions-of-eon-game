@@ -1,16 +1,5 @@
 {
-  BitmapFont: {
-    font-one: {
-      file: ../font/font_one.fnt,
-    }
-  },
-
   Color: {
-    white-ghost: { a: 0.23921569, b: 1.0, g: 1.0, r: 1.0 },
-    white-sakura: { hex: #E4DFFF },
-    glowing-ice: { hex: #75E6FF },
-    obsidian-blue: { hex: #070314 },
-
     spring-sky: {hex: #70CCFF }
     lilac: { hex: #7471FF }
     white-lilac: { hex: #D4D1FF },
@@ -30,38 +19,6 @@
       over: chain-button-focus,
     }
   },
-
-  LabelStyle: {
-    default: {
-      font: font-one,
-      fontColor: spring-sky,
-    }
-/*    skill-name: {
-      font: font-am-32,
-      fontColor: spring-sky,
-    }
-    skill-description: {
-      font: font-am-20,
-      fontColor: white-lilac,
-    }*/
-  }
-
-  TintedDrawable: {
-    skill-pane-element-lock: {
-      name: skill-pane-element,
-      color: white-ghost
-    }
-  }
-
-/*  ListStyle: {
-    default: {
-      font: font-a,
-      fontColorSelected: glowing-ice,
-      fontColorUnselected: white-sakura,
-      selection: list-element,
-    }
-
-  }*/
 
   ScrollPaneStyle: {
     default: {

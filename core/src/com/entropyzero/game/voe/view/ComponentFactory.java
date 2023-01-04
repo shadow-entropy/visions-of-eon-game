@@ -1,9 +1,11 @@
 package com.entropyzero.game.voe.view;
 
-import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
-import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.entropyzero.game.voe.asset.Font;
 import com.entropyzero.game.voe.screen.ScreenSize;
+import com.entropyzero.game.voe.util.Palette;
 
 import static com.entropyzero.game.voe.asset.Component.SKILL_PANE;
 
@@ -59,6 +61,47 @@ public interface ComponentFactory {
         pane.setPosition(0, -100 * scale);
         pane.setSize(650 * scale, 800 * scale);
         pane.setRotation(angle);
+        pane.setVisible(false);
         return pane;
     }
+
+    static Button newSkillPaneButton(ScrollPane skillPane) {
+        var skin = SKILL_PANE.skin();
+        var buttonStyle = new Button.ButtonStyle(
+                skin.getDrawable("skill-pane-button"),
+                skin.getDrawable("skill-pane-button-focus"),
+                skin.getDrawable("skill-pane-button-focus")
+        );
+        var button = new Button(buttonStyle);
+
+        var font = Font.AMAZ_OBITAEM.generateWithMipMaps(p -> p.size = 60);
+        var labelStyleDark = new Label.LabelStyle(font, Palette.SPACE_TWILIGHT);
+        var labelStyleLight = new Label.LabelStyle(font, Palette.QUARTZ);
+        var label = new Label("Навыки", labelStyleDark);
+        var wrapper = Wrapper.of(label);
+        wrapper.setRotation(-58);
+        wrapper.setPosition(110, 185);
+
+        button.setTransform(true);
+        button.setPosition(10 , 20);
+        button.setScale(0.6f);
+        button.addActor(wrapper);
+        button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                boolean visible = skillPane.isVisible();
+                skillPane.setVisible(!visible);
+                label.setStyle(visible ? labelStyleDark : labelStyleLight);
+            }
+        });
+        return button;
+    }
+
+    static ScrollPane newAttackChainPane() {
+        var group = new HorizontalGroup();
+        var pane = new ScrollPane(group, (Skin) null);
+        return pane;
+    }
+
+
 }

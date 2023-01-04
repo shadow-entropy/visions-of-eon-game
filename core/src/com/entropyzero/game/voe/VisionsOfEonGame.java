@@ -2,6 +2,7 @@ package com.entropyzero.game.voe;
 
 import com.badlogic.gdx.Game;
 import com.entropyzero.game.voe.screen.BattleScreen;
+import com.entropyzero.game.voe.view.BattleScreenEnvironment;
 
 public class VisionsOfEonGame extends Game {
 
@@ -9,7 +10,7 @@ public class VisionsOfEonGame extends Game {
 	
 	@Override
 	public void create () {
-		battleScreen = new BattleScreen(this);
+		battleScreen = new BattleScreen(this, new BattleScreenEnvironment());
 		setScreen(battleScreen);
 	}
 }
